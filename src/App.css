@@ -1,5 +1,3 @@
-.App {
-}
 
 .App-header {
   padding: 25px;
@@ -17,10 +15,6 @@
   display: flex;
   padding-top: 50px;
   justify-content: center;
-}
-
-.grid-container {
-
 }
 
 .grid-row-one {
