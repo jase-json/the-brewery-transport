@@ -6,6 +6,7 @@ const DegreeIcon = () => {
         <img className="snow-logo" alt="snowflake" src={snowFlake} style={{
             'max-width': '60px',
             'opacity': '60%',
+            'padding-right': '40px',
         }} />
     )
 };

@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import ButtonDial from './components/ButtonDial.js';
 import Header from './components/Header.js';
 import Truck from './Truck';
 
@@ -14,6 +15,11 @@ function App() {
       }}>
         <Truck />
       </body>
+      <footer style={{
+        'padding-left': '40px',
+      }}>
+        <ButtonDial />
+      </footer>
     </div>
     </>
   );
