@@ -6,21 +6,20 @@ import Truck from './Truck';
 
 function App() {
   return (
-    <><div className="App">
+    <>
       <Header />
-      <body className="game" style={{
+      <div className="App" style={{
         'display': 'flex',
-        'padding-top': '50px',
-        'justify-content': 'center',
+        'paddingTop': '50px',
+        'justifyContent': 'center',
       }}>
         <Truck />
-      </body>
+      </div>
       <footer style={{
-        'padding-left': '40px',
+        'paddingLeft': '40px',
       }}>
         <ButtonDial />
       </footer>
-    </div>
     </>
   );
 }

@@ -5,7 +5,7 @@ const Fridge = () => {
         <div style={{
             'padding': '75px 45px 75px 45px',
             'border': '10px solid #999999',
-            'font-size': '300%',
+            'fontSize': '300%',
             'color': 'green',
             }}
         >
