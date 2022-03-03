@@ -7,11 +7,13 @@ import Truck from './Truck';
 function App() {
   return (
     <>
+      <div style={{'max-width': '1024px'}}>
       <Header />
       <div className="App" style={{
         'display': 'flex',
         'paddingTop': '50px',
         'justifyContent': 'center',
+        'max-width': '1024px',
       }}>
         <Truck />
       </div>
@@ -20,6 +22,7 @@ function App() {
       }}>
         <ButtonDial />
       </footer>
+      </div>
     </>
   );
 }
