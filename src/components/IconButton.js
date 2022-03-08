@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createUseStyles } from "react-jss";
 
-const Button = (props) => {
+const IconButton = (props) => {
 
     const useStyles = createUseStyles({
         myButton: {
@@ -25,4 +25,4 @@ const Button = (props) => {
     )
 }
 
-export default Button;
+export default IconButton;

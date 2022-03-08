@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '../Button';
+import IconButton from '../IconButton';
 import { createUseStyles } from "react-jss";
 import LayoutIcon from '../../assets/layout.png';
 import Beer from '../../assets/beer.png'
@@ -19,8 +19,8 @@ const Menu = () => {
     return (
         <>
             <div className={classes.menu}>
-                <Button icon={LayoutIcon} />
-                <Button icon={Beer} />
+                <IconButton icon={LayoutIcon} />
+                <IconButton icon={Beer} />
             </div>
         </>
     )
