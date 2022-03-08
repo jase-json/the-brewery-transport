@@ -1,11 +1,12 @@
 import * as React from 'react';
+import Button from './Button';
 
 const Menu = () => {
     return (
         <>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
+            <Button text={1}/>
+            <Button text={2}/>
+            <Button text={3}/>
         </>
     )
 }
