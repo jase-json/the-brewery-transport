@@ -8,6 +8,7 @@ const Header = () => {
             'fontSize': '300%',
             'display': 'flex',
             'justifyContent': 'space-between',
+            'fontFamily': 'monospace',
         }}>
             <div>The Brewery Transport</div>
             <DegreeIcon />

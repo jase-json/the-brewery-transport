@@ -9,10 +9,8 @@ const Menu = () => {
     const useStyles = createUseStyles({
         menu: {
             'marginTop': '45px',
-            'marginLeft': '15px',
+            'marginLeft': '10px',
             'border': '5px',
-            // 'background': 'grey',
-            // 'opacity': '50%'
         },
     });
 
