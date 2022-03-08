@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import ButtonDial from './components/ButtonDial.js';
+import ButtonDial from './components/menu/ButtonDial';
 import Header from './components/Header.js';
 import Truck from './Truck';
 

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Button from './Button';
+import Button from '../Button';
 import { createUseStyles } from "react-jss";
-import LayoutIcon from '../assets/layout.png';
-import Beer from '../assets/beer.png'
+import LayoutIcon from '../../assets/layout.png';
+import Beer from '../../assets/beer.png'
 
 const Menu = () => {
 
