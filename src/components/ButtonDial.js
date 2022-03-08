@@ -8,7 +8,7 @@ const ButtonDial = () => {
     const useStyles = createUseStyles({
         myButton: {
             'padding': '20px',
-            'margin-top': '50px',
+            'marginTop': '50px',
             'height': '25px',
             'width': '25px',
             'borderRadius': '50%',
