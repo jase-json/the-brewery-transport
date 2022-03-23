@@ -3,6 +3,7 @@ import IconButton from '../IconButton';
 import { createUseStyles } from "react-jss";
 import LayoutIcon from '../../assets/layout.png';
 import Beer from '../../assets/beer.png'
+import Modal from '../Modal';
 
 const Menu = () => {
 
@@ -22,6 +23,7 @@ const Menu = () => {
                 <IconButton icon={LayoutIcon} />
                 <IconButton icon={Beer} />
             </div>
+            <Modal />
         </>
     )
 }
