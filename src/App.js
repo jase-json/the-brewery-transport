@@ -3,25 +3,23 @@ import * as React from 'react';
 import ButtonDial from './components/menu/ButtonDial';
 import Header from './components/Header.js';
 import Truck from './components/Truck';
-import BeerSelection from './components/BeerSelection';
+import BeerSelectionComponent from './components/BeerSelectionComponent';
 
 const App = () => {
   const [showModal, setShowModal] = React.useState();
+  const [fridgePropsState, setFridgePropsState] = React.useState({});
   
   const closeModal = () => setShowModal(false);
-  const showModalProp = () => setShowModal(true);
+  
+  const showModalProp = (fridgeProps) => {
+    setFridgePropsState(fridgeProps);
+    setShowModal(true)
+  };
 
   const props = {
     closeModal: closeModal,
-    showModal: showModalProp
-  };
-
-  const renderOverlayBackgound = () => {
-    return (
-      <>
-        <div className="overlay" onClick={() => setShowModal(false)}></div>
-      </>
-    );
+    showModal: showModalProp,
+    fridgePropsState
   };
 
   const renderApp = () => {
@@ -35,7 +33,7 @@ const App = () => {
             'justifyContent': 'center',
             'maxWidth': '1024px',
           }}>
-            <Truck />
+            <Truck {...props}/>
           </div>
           <footer style={{
             'paddingLeft': '40px',
@@ -48,16 +46,16 @@ const App = () => {
     );
   }
 
-  const renderModal = () => {
+  const renderContainer = () => {
     return (
       <>
         {renderApp()}
-        {showModal && renderOverlayBackgound()}
-        {showModal && <BeerSelection {...props} />}
+        {showModal && <BeerSelectionComponent {...props} />}
       </>
     );
   }
-  return <div className="App">{renderApp()}</div>;
+  
+  return <div className="App">{renderContainer()}</div>;
 };
 
 export default App;
