@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Fridge from './components/Fridge';
+import Fridge from './Fridge';
 
 const Truck = () => {
     return (

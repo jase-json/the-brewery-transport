@@ -2,43 +2,62 @@ import * as React from 'react';
 
 import ButtonDial from './components/menu/ButtonDial';
 import Header from './components/Header.js';
-import Truck from './Truck';
+import Truck from './components/Truck';
+import BeerSelection from './components/BeerSelection';
 
-function App() {
+const App = () => {
+  const [showModal, setShowModal] = React.useState();
+  
+  const closeModal = () => setShowModal(false);
+  const showModalProp = () => setShowModal(true);
 
-  // const setOpacity = () => {
-  //   document.getElementsByClassName('App').style.setOpacity('50%');
-  // }
-  // Brian suggestions
+  const props = {
+    closeModal: closeModal,
+    showModal: showModalProp
+  };
 
-  return (
-    <>
-      <div className="App" style={{ 'maxWidth': '1024px' }}>
-        <Header />
-        <div className="Truck" style={{
-          'display': 'flex',
-          'paddingTop': '50px',
-          'justifyContent': 'center',
-          'maxWidth': '1024px',
-        }}>
-          <Truck />
+  const renderOverlayBackgound = () => {
+    return (
+      <>
+        <div className="overlay" onClick={() => setShowModal(false)}></div>
+      </>
+    );
+  };
+
+  const renderApp = () => {
+    return (
+      <>
+        <div className="App" style={{ 'maxWidth': '1024px' }}>
+          <Header />
+          <div className="Truck" style={{
+            'display': 'flex',
+            'paddingTop': '50px',
+            'justifyContent': 'center',
+            'maxWidth': '1024px',
+          }}>
+            <Truck />
+          </div>
+          <footer style={{
+            'paddingLeft': '40px',
+            'display': 'flex',
+          }}>
+            <ButtonDial />
+          </footer>
         </div>
-        <footer style={{
-          'paddingLeft': '40px',
-          'display': 'flex',
-        }}>
-          {/* <ButtonDial onClick={() => {
-            set 'App' opacity to 50% (Brian suggestions)
-            setOpacity();
-          }}/> */}
-          <ButtonDial />
-        </footer>
-      </div>
-    </>
-  );
-}
+      </>
+    );
+  }
+
+  const renderModal = () => {
+    return (
+      <>
+        {renderApp()}
+        {showModal && renderOverlayBackgound()}
+        {showModal && <BeerSelection {...props} />}
+      </>
+    );
+  }
+  return <div className="App">{renderApp()}</div>;
+};
 
 export default App;
-
-// react storybooks
-// use mui speed-dial for button (bottom-left) reference
