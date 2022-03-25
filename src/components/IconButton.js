@@ -8,9 +8,12 @@ const IconButton = (props) => {
             'margin': '10px',
             'height': '30px',
             'width': '30px',
+            'backgroundColor': 'white',
+            'zIndex': '1',
         },
         icon: {
             'marginLeft': '-5px',
+            'backgroundColor': 'white',
         }
     });
 

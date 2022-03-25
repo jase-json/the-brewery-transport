@@ -1,18 +1,9 @@
 import * as React from 'react';
-import { createUseStyles } from "react-jss";
 import BeerWidget from './BeerWidget';
+import ModalOverlay from './ModalOverlay';
+import { createUseStyles } from "react-jss";
 
 const BeerSelectionComponent = (props) => {
-
-    const useStyles = createUseStyles({
-        overlay: {
-            'position': 'fixed',
-            'inset': '0px',
-            'background-color': 'rgba(0, 0, 0, 0.4)',
-          },
-    });
-    
-    const classes = useStyles();
 
     const onBeerSelected = (beer) => {
         props.fridgePropsState.onBeerSelected(beer);
@@ -25,7 +16,7 @@ const BeerSelectionComponent = (props) => {
 
     return (
         <>
-        <div className={classes.overlay} onClick={() => props.closeModal()} />
+        <ModalOverlay {...props} />
         <div
           style={{
             position: "fixed",
@@ -61,18 +52,18 @@ const BeerSelectionComponent = (props) => {
               }}
             >
               <div style={{ display: "flex" }}>
-                <BeerWidget {...getProps("Beer 1", "rgb(255, 167, 26)")} />
-                <BeerWidget {...getProps("Beer 2", "rgb(95, 166, 216)")} />
-                <BeerWidget {...getProps("Beer 3", "rgb(120, 219, 166)")} />
-                <BeerWidget {...getProps("Beer 4", "rgb(219, 190, 120)")} />
-                <BeerWidget {...getProps("Beer 5", "rgb(219, 120, 199)")} />
+                <BeerWidget {...getProps("Beer 1", "lightGrey")} />
+                <BeerWidget {...getProps("Beer 2", "lightGrey")} />
+                <BeerWidget {...getProps("Beer 3", "lightGrey")} />
+                <BeerWidget {...getProps("Beer 4", "lightGrey")} />
+                <BeerWidget {...getProps("Beer 5", "lightGrey")} />
               </div>
               <div
                 className="fade-opacity-hover"
                 style={{
                   margin: "24px auto",
                   padding: "12px",
-                  backgroundColor: "rgb(164, 216, 231)",
+                  backgroundColor: "lightGrey",
                   color: "rgb(0, 0, 0)",
                   borderRradius: "99px",
                   cursor: "pointer"

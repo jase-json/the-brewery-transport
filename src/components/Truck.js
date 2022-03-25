@@ -24,7 +24,7 @@ const Truck = (props) => {
           {getFridges(1)}
         </div>
         <div className="grid-row-two" style={{display: 'flex'}}>
-        {getFridges(2)}
+          {getFridges(2)}
         </div>
       </div>
     )

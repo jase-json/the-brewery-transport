@@ -12,9 +12,11 @@ const ButtonDial = () => {
             'height': '25px',
             'width': '25px',
             'borderRadius': '50%',
-            '&:after': {
-                background: 'green'
-            },
+            'backgroundColor': 'white',
+            'zIndex': '1',
+            // '&:after': {
+            //     background: 'green'
+            // },
         },
     });
 
