@@ -13,7 +13,8 @@ export default function BeerWidget(props) {
         width: "100px",
         margin: "4px",
         backgroundColor: props.color,
-        cursor: "pointer"
+        cursor: "pointer",
+        fontFamily: "monospace"
       }}
       onClick={() => props.onBeerSelected(props.title)}
       // onClick={() => console.log(`${props.title} selected`)}

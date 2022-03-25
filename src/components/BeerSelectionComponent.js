@@ -43,7 +43,7 @@ const BeerSelectionComponent = (props) => {
               pointerEvents: "initial"
             }}
           >
-            <h1 style={{ marginTop: "0px" }}>Select Beer</h1>
+            <h1 style={{ marginTop: "0px", fontFamily: "monospace" }}>Select Beer</h1>
             <div
               style={{
                 overflow: "auto",
@@ -66,7 +66,8 @@ const BeerSelectionComponent = (props) => {
                   backgroundColor: "lightGrey",
                   color: "rgb(0, 0, 0)",
                   borderRradius: "99px",
-                  cursor: "pointer"
+                  cursor: "pointer",
+                  fontFamily: "monospace"
                 }}
                 onClick={() => props.fridgePropsState.onBeerSelected("+")}
               >
